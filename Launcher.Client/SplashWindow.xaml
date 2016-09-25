@@ -1,0 +1,35 @@
+﻿<Window x:Class="Launcher.Client.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Launcher.Client"
+        mc:Ignorable="d"
+        Title="SplashWindow" Height="298.981" Width="595.592" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        WindowStyle="None"
+        Initialized="Window_Initialized" Closing="Window_Closing" Activated="Window_Activated">
+    <Window.Background>
+        <ImageBrush ImageSource="http://img2.goodfon.su/wallpaper/big/b/cd/pb-pointblank-pb-point-mid-mid.jpg" />
+    </Window.Background>
+    <Window.Resources>
+        <SolidColorBrush x:Key="TransparentWhite" Color="#ffffff" Opacity="0.7" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <DockPanel Margin="10,0,9.573,25.184" LastChildFill="True" Background="{StaticResource TransparentWhite}" VerticalAlignment="Bottom" Height="49">
+            <Label Name="lblStatus"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                    Conectando ao servidor, aguarde....
+                </TextBlock>
+            </Label>
+        </DockPanel>
+
+        <DockPanel LastChildFill="False" Margin="10,10,230.573,69.184">
+            <Image x:Name="imgLogo" Source="http://img14.deviantart.net/1bb1/i/2011/009/7/1/logo_pb_by_dtreestart-d36rurv.png" Margin="0,0,0,49.961" Width="225" />
+        </DockPanel>
+        <ProgressBar Name="pbProcess" HorizontalAlignment="Left" Height="10" Margin="10,279,0,0" VerticalAlignment="Top" Width="576" Foreground="#FF01D328" Maximum="100" IsIndeterminate="True"/>
+    </Grid>
+</Window>
